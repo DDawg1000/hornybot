@@ -24,13 +24,13 @@ class MyClient(discord.Client):
             channel = client.get_channel(763999136697548813)
             vc = await channel.connect()
             vc.stop()
-            vc.play(discord.FFmpegPCMAudio(executable="C:/Users/Nasty/Desktop/ffmpeg-2020-10-11-git-7ea4bcff7b-full_build/bin/ffmpeg.exe", source = "henta-girl.mp3"))
+            vc.play(discord.FFmpegPCMAudio(executable="C:/.../ffmpeg.exe", source = "henta-girl.mp3"))
             while vc.is_playing():
                 await asyncio.sleep(1)
             vc.stop()
             await vc.disconnect()
 
 client = MyClient()
-client.run("NzY1NDM2OTMzMjk1ODMzMDg5.X4Uysg.T3d8oM6WyyQC5sGd-EZUpakL_d8")
+client.run("MY TOKEN HERE")
 
 
